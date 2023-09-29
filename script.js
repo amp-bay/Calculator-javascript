@@ -8,11 +8,13 @@ class Calculator{
     updateDisplay(){
         this.currentDisplayTextElment.innerText=this.currentDisplay;
         if(this.operation !=null){
-            this.previousDisplayTextElement.innerText=this.previousDisplay + (" ")+ (this.operation)
-            this.previousDisplayTextElement.innerText=`${this.previousDisplay} ${this.operation}`
-            
+            this.previousDisplayTextElement.innerText=this.previousDisplay + (" ") + (this.operation)
+            // this.previousDisplayTextElement.innerText=`${this.previousDisplay} ${this.operation}`     
         }
-        // this.previousDisplayTextElement.innerText=this.previousDisplay;
+        else{
+            this.previousDisplayTextElement.innerText=""
+        }
+    
         
 
 
@@ -37,9 +39,10 @@ class Calculator{
 
     }
     clear(){
-    
+        this.previousDisplay=""
         this.currentDisplay="";
-        this.previousDisplay="";
+        // this.previousDisplay=""
+        // this.previousDisplay="";
         this.operation=undefined;
 
     }
@@ -80,10 +83,12 @@ class Calculator{
 
         this.currentDisplay=computation
         this.operation=undefined
-        this.previousDisplay=""
+        // this.previousDisplay = "u"
+        this.previousDisplay =""
+
 
     }
-    // if(computation===number)
+   
     
 }
 
